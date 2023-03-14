@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+    --lightRed: hsl(0, 100%, 67%);
+    --lighterRed: hsl(0, 100%, 98%);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --lighterOrangeyYellow: hsl(39 ,100%, 97%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --lighterGreenTeal: hsl(166, 100%, 97%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+    --lighterCobaltBlue:  hsl(234, 85%, 97%);
+    --backgroundGradient1: hsl(252, 100%, 67%);
+    --backgroundGradient2: hsl(241, 81%, 54%);
+    --circleGradient1: hsla(256, 72%, 46%, 1);
+    --circleGradient2: hsla(241, 72%, 46%, 0);
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%); 
+    --darkGrayBlue: hsl(224, 30%, 27%);
+    --grayish: hsl(285, 4%, 62%);
+}
+
+*{
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.result{
+    display: flex;
+    height: 40vh;
+    /* background: linear-gradient(180deg, rgba(118,86,254,1) 16%, rgba(46,43,233,1) 100%); */
+    background: linear-gradient(180deg, rgba(120,87,255,1) 0%, rgba(46,43,233,1) 100%);
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 30px 30px;
+}
+.result > h1{
+    color: var(--lightLavender);
+    font-weight: 700;
+    padding: 20px;
+    font-size: 1.25rem;
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 15vh;
+    border-radius: 100%;
+    background: linear-gradient(180deg, rgba(78,33,202,1) 16%, rgba(36,33,202,0.7251732101616628) 100%);
+}
+
+.score > h2{
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.score > p {
+    color: var(--lightLavender);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.great{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.3rem;
+}
+
+.great > h2{
+    font-weight: 700;
+    color: var(--white);
+    padding-bottom: .75rem;
+}
+
+.great > p{
+    font-size: 1.125;
+    font-weight: 500;
+    color: var(--lightLavender);
+    padding: 0 2rem;
+}
+
+.summary{
+    padding: 1.5em 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary > h3{
+    padding: 0 0 1em .5em;
+    color: var(--darkGrayBlue);
+    font-weight: 700;
+}
+
+.summaryDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 0 0 1em 0;
+    border-radius: .75em;
+}
+
+.summaryDiv h4{
+    padding-left: .75em;
+    font-weight: 700;
+}
+
+.reaction h4{
+   color: var(--lightRed);
+}
+
+.memory h4{
+    color: var(--orangeyYellow);
+}
+
+.verbal h4{
+    color: var(--greenTeal);
+}
+
+.visual h4{
+    color: var(--cobaltBlue);
+}
+
+.summarySpan{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.summaryScore{
+    display: flex;
+    flex-direction: row;
+}
+
+.summaryScore > p{
+    padding: 0 0.25em;
+}
+
+.gray{
+    color: var(--grayish);
+    font-weight: 700;
+}
+
+.reaction{
+    background-color: var(--lighterRed);
+}
+
+.memory{
+    background-color: var(--lighterOrangeyYellow);
+}
+
+.verbal{
+    background-color: var(--lighterGreenTeal);
+}
+
+.visual{
+    background-color: var(--lighterCobaltBlue);
+}
+
+.continue{
+    background-color: var(--darkGrayBlue);
+    margin-top: .5em;
+    padding: 1em;
+    border-radius: 2em;
+    border: none;
+    font-weight: 700;
+    font-size: 1em;
+    color: var(--white);
+}
+
+.scoreValue{
+    font-weight: 900;
+    color: var(--darkGrayBlue);
+}
+
+@media screen and (min-width: 768px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main{
+        height: 100vh;
+        width: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .result{
+        border-radius: 2em;
+        height: 29em;
+        width: 21em;
+        padding: 1em 0;
+        box-shadow: 0 .625em .31275em 0 var(--lighterCobaltBlue);
+    }
+    
+    .summary{
+        border-radius: 0 2em 2em 0;
+        box-shadow: .625em .625em .31275em 0 var(--lighterCobaltBlue);
+        padding: 2em 2em 2em 4em;
+        margin-left: -2em;
+        z-index: -1;
+        height: 29em;
+        width: 21em;
+   
+    }
+
+    .summary h3{
+        margin: .1em;
+        font-weight: 900;
+    }
+
+    .great{
+        padding: 3em 1.3em 0 1.3em;
+    }
+    .visual{
+        margin-bottom: 2em;
+    }
+    
+    .score{
+        height: 11em;
+        width: 11em;
+    }
+}
